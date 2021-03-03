@@ -66,20 +66,9 @@ class ViewController: UIViewController {
         }
     }
     func addNode() {
-        print("Adding Node")
-        let node = SCNNode(geometry: SCNBox(width: 0.2, height: 0.2, length: 0.2, chamferRadius: 0))
-        node.name = "Cubo Blanco"
-        node.position = SCNVector3(0, 0, 1)
-        self.sceneView.scene.rootNode.addChildNode(node)
-        
-        let node2 = SCNNode(geometry: SCNPyramid(width: 0.2, height: 0.2, length: 0.2))
-        node2.name = "Piramide"
-        node2.position = SCNVector3(0, 0, 0)
-        self.sceneView.scene.rootNode.addChildNode(node2)
-        
         let jellyScene = SCNScene(named: "art.scnassets/Jellyfish.scn")
         let jellyNode = jellyScene?.rootNode.childNode(withName: "Jellyfish", recursively: false)
-        jellyNode?.position = SCNVector3(0,1,0)
+        jellyNode?.position = SCNVector3(Float.random(in: -1...1),Float.random(in: -1...1),Float.random(in: -1...1))
         jellyNode?.name = "Medusa"
         self.sceneView.scene.rootNode.addChildNode(jellyNode!)
     }
