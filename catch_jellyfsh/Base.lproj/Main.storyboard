@@ -20,16 +20,6 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9k-rM-Kp1">
                                 <rect key="frame" x="0.0" y="172" width="414" height="590"/>
                             </arscnView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7Y-0k-ASw">
-                                <rect key="frame" x="0.0" y="774" width="414" height="67"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="L13-dl-eyT"/>
-                                </constraints>
-                                <state key="normal" title="Play"/>
-                                <connections>
-                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLK-y6-AqV"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RT-3p-FYT">
                                 <rect key="frame" x="0.0" y="44" width="414" height="128"/>
                                 <subviews>
@@ -47,25 +37,59 @@
                                     <constraint firstAttribute="height" constant="128" id="nOx-0w-kJc"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzt-F2-XCm">
+                                <rect key="frame" x="314" y="807" width="50" height="30"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llC-XJ-CJv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7Y-0k-ASw">
+                                <rect key="frame" x="50" y="807" width="30" height="30"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLK-y6-AqV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mu-o6-ccc">
+                                <rect key="frame" x="174.5" y="841" width="65" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBW-D9-iQz">
+                                <rect key="frame" x="187" y="799" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9Mu-o6-ccc" firstAttribute="top" secondItem="gBW-D9-iQz" secondAttribute="bottom" constant="21" id="0W5-Hq-tmD"/>
                             <constraint firstItem="F9k-rM-Kp1" firstAttribute="top" secondItem="6RT-3p-FYT" secondAttribute="bottom" id="19C-vc-kyt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F9k-rM-Kp1" secondAttribute="bottom" constant="100" id="4AT-ky-wJm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Nzt-F2-XCm" secondAttribute="bottom" constant="25" id="93i-Wf-CcF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F7Y-0k-ASw" secondAttribute="bottom" constant="25" id="9bd-hq-Rlf"/>
                             <constraint firstItem="6RT-3p-FYT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HLO-eg-mFE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nzt-F2-XCm" secondAttribute="trailing" constant="50" id="HRc-IW-q6F"/>
                             <constraint firstItem="6RT-3p-FYT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="LhX-J3-7a5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F7Y-0k-ASw" secondAttribute="trailing" id="MO1-Qs-oVf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Mu-o6-ccc" secondAttribute="bottom" id="NFQ-Oj-nCj"/>
+                            <constraint firstItem="gBW-D9-iQz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oam-v3-vL5"/>
+                            <constraint firstItem="F7Y-0k-ASw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="R1w-dq-FRK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6RT-3p-FYT" secondAttribute="trailing" id="X4a-SK-rnH"/>
+                            <constraint firstItem="9Mu-o6-ccc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YrI-Uk-6Ph"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="F9k-rM-Kp1" secondAttribute="trailing" id="gkO-JY-KXg"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F7Y-0k-ASw" secondAttribute="bottom" constant="21" id="lWn-qw-RTX"/>
                             <constraint firstItem="F9k-rM-Kp1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ljf-3C-INp"/>
-                            <constraint firstItem="F7Y-0k-ASw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xUv-BH-VUz"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="enemiesLabel" destination="9Mu-o6-ccc" id="5bm-Ej-ecC"/>
                         <outlet property="labelTemp" destination="906-0H-XUj" id="UwD-Xr-hfo"/>
+                        <outlet property="levelLabel" destination="gBW-D9-iQz" id="wPl-Iq-l4I"/>
                         <outlet property="playButton" destination="F7Y-0k-ASw" id="qxp-ph-D9u"/>
+                        <outlet property="restartButton" destination="Nzt-F2-XCm" id="6hy-XG-CyT"/>
                         <outlet property="sceneView" destination="F9k-rM-Kp1" id="sr4-XW-hCA"/>
                     </connections>
                 </viewController>
